@@ -1,1 +1,3 @@
-paho-mqtt pyserial requests
+paho-mqtt 
+pyserial 
+requests
