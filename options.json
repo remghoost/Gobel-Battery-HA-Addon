@@ -1,0 +1,33 @@
+{
+  "mqtt_broker": "192.168.1.200",
+  "mqtt_port": 1883,
+  "mqtt_username": "",
+  "mqtt_password": "",
+
+  "host_name": "eco_battery",
+
+  "mqtt_discovery_topic": "homeassistant",
+
+  "device_name": "Eco Battery",
+  "battery_manufacturer": "Eco-Worthy",
+  "battery_model": "PowerMega 314Ah",
+
+  "max_parallel_allowed": 1,
+
+  "connection_type": "wifi",
+
+  "bms_ip_address": "192.168.1.230",
+  "bms_ip_port": 23,
+
+  "bms_usb_port": "",
+  "bms_baud_rate": 9600,
+
+  "battery_manufacturer": "PACE",
+  "battery_model": "LV",
+  "bms_type": "PACE_LV",
+
+  "battery_port": "rs232",
+
+  "data_refresh_interval": 5,
+  "debug": true
+}

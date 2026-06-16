@@ -47,7 +47,7 @@ class HA_MQTT:
 
     def publish_sensor_discovery(self, entity_id, unit, icon, deviceclass, stateclass, precision=None):
         main_topic = 'sensor'
-        topic = f"{self.host_name}/{main_topic}/{self.device_name}_{entity_id}/config"
+        topic = f"homeassistant/{main_topic}/{self.device_name}_{entity_id}/config"
         # self.logger.debug(f"Publishing discovery to topic: {topic}")
         payload = {
             "name": " ".join(self.cap_first(word) for word in entity_id.split("_")),

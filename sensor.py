@@ -17,20 +17,16 @@ from ha_mqtt_jk import HA_MQTT_JK
 
 # Define the load_config function
 def load_config():
-    config_path = '/data/options.json'
+    config_path = os.path.join(os.path.dirname(__file__), "options.json")
+
+    print(f"Looking for config at: {config_path}")
+
     if os.path.exists(config_path):
         print("Loading options.json")
-        try:
-            with open(config_path) as file:
-                config = json.load(file)
-                # print("Config: " + json.dumps(config))
-                return config
-        except Exception as e:
-            print("Error loading configuration: %s", str(e))
-            return None
+        with open(config_path) as file:
+            return json.load(file)
     else:
-        print("No config file found.")
-        print("Please make a configuration in the panel")
+        print("Config file NOT found")
         return None
 
 
